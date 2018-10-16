@@ -1,4 +1,5 @@
 require 'menu'
+require 'order'
 
 describe Menu do
   subject(:menu) { described_class.new }
@@ -16,3 +17,13 @@ describe Menu do
  end 
 end 
 end
+
+describe Order do 
+  describe '#order' do 
+    expect(subject).to respond_to(:order).with(1).argument
+  end 
+  
+ it 'outputs order list' do
+        expect(subject.order([1,2,3])).to chan
+    end
+  end
